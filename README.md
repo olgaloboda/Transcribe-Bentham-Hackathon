@@ -4,4 +4,4 @@ More details about the hackathon can be found [in the UCL blog](http://blogs.ucl
 
 ![Screenshot](https://github.com/olgaloboda/Transcribe-Bentham-Hackathon/blob/master/BenthamScreenshot.png)
 
-## Available for preview at https://olgaloboda.github.io/Transcribe-Bentham-Hackathon/
+## Available at https://olgaloboda.github.io/Transcribe-Bentham-Hackathon/
