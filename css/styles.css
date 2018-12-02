@@ -43,7 +43,6 @@ p a {
 	background-image: url("../images/jeremy-bentham.jpg");
 	background-repeat:no-repeat;
 	background-position:left top;
-	background-size:100%;
 }
 
 .content {
@@ -68,29 +67,18 @@ p a {
 	position:relative;padding:10px;
 }
 
-#carousel{
-	max-width:1120px;
-	white-space:nowrap;
-	overflow-y:hidden;
-	overflow-x:scroll;
-}
-
-#images  img {
+#images img {
 	max-height:300px;
 }
 
-#carousel ul, li:first-child {
-	padding-left:0px;
-}
 
 #carousel li {
 	display:inline-block;
 	list-style:none;
 	margin:0px 20px 0px 20px;
-	-webkit-box-shadow:3px 3px 5px #acacac;
-	-moz-box-shadow:3px 3px 5px #acacac;
-	box-shadow:3px 3px 5px #acacac;
+	width: 200px;
 }
+
 .login ul {
 	list-style:none;
 	margin:30px 0px 20px 0px;
@@ -362,7 +350,7 @@ form.registration-form fieldset {
 
 #manuscript_list {
 	padding-top:30px;
-	padding-bottom:30px !important;
+	padding-bottom:30px;
 }
 #manuscript_list img {
 	height:300px;
@@ -376,11 +364,12 @@ form.registration-form fieldset {
 #manuscript_list li {
 	float:left;
 	list-style:none;
-	margin:10px;
+	margin:10px 10px 30px 10px;
 }
 
 #manuscript_list li p {
 	margin-bottom:0px;
+	max-width: 200px;
 }
 
 #manuscript_list li p:first-child {
@@ -416,29 +405,6 @@ footer a{
 }
  
 
-.zoom-in {      
-	-webkit-transition: all 0.35s ease-in-out;    
-	-moz-transition: all 0.35s ease-in-out;    
-	transition: all 0.35s ease-in-out;     
-	cursor: -webkit-zoom-in;      
-	cursor: -moz-zoom-in;      
-	cursor: zoom-in;  
-}     
-
-.zoom-in:hover,  
-.zoom-in:active,   
-.zoom-in:focus {
-/**adjust scale to desired size, 
-add browser prefixes**/
--ms-transform: scale(3.5);    
--moz-transform: scale(3.5);  
--webkit-transform: scale(3.5);  
--o-transform: scale(3.5);  
-transform: scale(3.5);    
-position:relative;      
-z-index:10000;  
-}
-
 .up {
 	color: #09b743;
 	font-weight:bold;
@@ -456,6 +422,27 @@ z-index:10000;
 }
 
 .search {
-	width: 330px; 
+	width: 320px; 
 	height:40px !important;
+	padding-left: 10px;
+}
+
+.disclaimer{
+	background: black;
+	text-align:center;
+	color: white;
+	padding:5px 0px;
+}
+
+.form-inline{
+	margin-top: 40px;
+}
+
+.navbar-toggle {
+	margin-top: 40px !important;
+}
+@media screen and (max-width: 765px) {
+	.form-inline {
+		margin-top: 0px;
+	}
 }
