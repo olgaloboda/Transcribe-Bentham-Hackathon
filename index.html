@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Trnscribe Bentham Project" />
+
+		<title>Transcribe Bentham Hackathon</title>
+    
+	    <!-- add robots -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<!-- Bootstrap support -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- Link the fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+		<!-- icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+	<body id="body" data-spy="scroll" data-target=".navbar" data-offset="60">
+		<div id="header">
+			<div class="container-fluid disclaimer">This is a <strong>prototype</strong> developed as a part of the Transcribe Bentham Hackathon in 2017.</div>
+			<nav class="navbar navbar-default navbar-fixed-top" style="position:relative; margin-bottom:0px">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="cd-sm-2 col-md-3">
+								<div class="navbar-header">
+					    			<a href="index.html">
+										<img src="images/logo.png" style="height:80px !important; margin:20px 0px; float:left;"/>
+									</a>
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span> 
+						      		</button>
+						      	</div>
+							</div>
+							<div class="col-xs-12 col-sm-8 col-md-5">
+					    		<form action="" class="form-inline inline">
+									<div class="input-group">
+										<input type="text" placeholder="Search by keywords" class="search"/>
+										<button type="button" class="button_search" style="height:40px !important; width:40px !important">
+									        <span class="fa fa-search"></span> 
+								        </button>
+									</div>	
+								</form>
+							</div>
+							<div class="col-xs-12 col-md-4 text-right">
+								<div class="login">
+							    	<ul>
+							    		<li style="float:right"><a href="http://www.transcribe-bentham.da.ulcc.ac.uk/td/index.php?title=Special:UserLogin&returnto=Benthamometer">Login</a></li>
+										<li style="float:right; margin-right:20px"><a href="http://www.transcribe-bentham.da.ulcc.ac.uk/td/index.php?title=Special:UserLogin&returnto=Benthamometer&type=signup">Register</a></li>
+										<li style="float:right; margin-right:20px"><a href="http://blogs.ucl.ac.uk/transcribe-bentham/contact-us/">Contact Us</a></li>
+									</ul>
+								</div>
+							</div>
+					 	</div>
+					</div>
+				</div>
+				<div class="container-fluid" style="background-color: black">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="collapse navbar-collapse" id="main-menu">
+									<ul class="nav navbar-nav">
+										<li><a href="index.html" class="link" style="background-color:white; color:black">Transcription Desk</a></li>
+										<li><a href="http://www.transcribe-bentham.da.ulcc.ac.uk/td/Help:Transcription_Guidelines" class="link">Guidelines</a></li>
+										<li><a href="manuscript_list.html" class="link">Select a manuscript</a></li>
+										<li><a href="http://blogs.ucl.ac.uk/transcribe-bentham/" class="link">About</a></li>
+										<li><a href="certificate.html" class="link">Generate a certificate</a></li>
+										<li><a href="manuscript.html" class="link">Spin a wheel</a></li>
+									</ul>
+									<div style="text-align:right">
+										<a href="https://www.ucl.ac.uk"><img src="images/ucl.png" style="height:50px"/></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<main>
+			<div class="container-fluid padding" id="main-banner">
+				<div class="container content">
+					<h1>Welcome to<br/>Transcription Desk!</h1>
+					<p id="banner-description" class="hidden-sm hidden-xs">The Transcription Desk is the heart of a major online initiative to transcribe the manuscripts of the English philosopher Jeremy Bentham. It is managed by the Bentham Project at University College London. You are invited to assist us by using the Transcription Desk to type up the text of Bentham's manuscripts. These transcripts will make it easier for anyone to access and read Bentham's papers and will be used by scholars at the Bentham Project in the production of the edition of The Collected Works of Jeremy Bentham.</p>
+					<div style="margin-top:80px">
+						<h4>Our Benthamometer</h4>
+						<div class="progress text-center" style="height:40px">
+								<div class="progress-bar-success" role="progressbar" aria-valuenow="44.12" aria-valuemin="0" aria-valuemax="100">
+									<span style="color:white;">44.12% Complete</span>
+								</div>
+						</div>
+						<a href='http://www.transcribe-bentham.da.ulcc.ac.uk/td/Benthamometer' style="color:white; text-decoration:underline; float:right; margin-bottom:10px; background:black">See the progress in greater detail</a>
+					</div>
+				</div>
+				<div class="text-center">
+					<button class="transcribe_button" id="Generate">Start Transcribing</button>
+				</div>
+			</div>
+			<div class="container text-center" style="padding-top:30px">
+				<h2>Brief instructions</h2>
+				<div class="row" style="margin-bottom:40px">
+					<div class="col-sm-4">
+						<span class="glyphicon glyphicon-search"></span>
+						<h3>Explore</h3>
+						<p>Use our user-friendly <a href="#recommender">recommender system</a> to find a document that will meet your requirements and interests!</p>
+					</div>
+					<div class="col-sm-4">
+						<span class="glyphicon glyphicon-wrench"></span>
+						<h3>Transcribe</h3>
+						<p>Jeremy Bentham handwriting is tricky but gripping at the same time. Try to decipher! If you find it difficult, use our navigation to change the level of difficulty.</p>
+					</div>
+					<div class="col-sm-4">
+						<span class="glyphicon glyphicon-floppy-open"></span>
+						<h3>Submit</h3>
+						<p>Click submit and you are done! We truly appreciate any contribution! Our team will review your work and we will add you to our acknowledgements list if you want to!</p>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid padding text-center hidden-xs" id="carousel_block">
+				<h2>Help us transcribe!</h2>
+				<p style="margin-bottom:40px">Don't know where to start? Use our <a href="#recommender">recommender</a> below!</p>
+				<div class= "container" id="carousel">
+						<ul id="images">
+							<li><a href="manuscript.html"><img src="images/103_055_001.jpg" alt="Box 103, fol. 55, UCL Bentham Papers, UCL Special Collections. Image courtesy of UCL Special Collections"/></a>
+							<p>Box 103, fol. 55, UCL Bentham Papers, UCL Special Collections. Image courtesy of UCL Special Collections</p>
+							</li>
+							<li><a href="manuscript.html"><img src="images/103_055_001.jpg" alt="Box 103, fol. 55, UCL Bentham Papers, UCL Special Collections. Image courtesy of UCL Special Collections"/></a>
+							<p>Box 103, fol. 55, UCL Bentham Papers, UCL Special Collections. Image courtesy of UCL Special Collections</p></li>
+							<li><a href="manuscript.html"><img src="images/103_055_001.jpg" alt="Box 103, fol. 55, UCL Bentham Papers, UCL Special Collections. Image courtesy of UCL Special Collections"/></a><p>Box 103, fol. 55, UCL Bentham Papers, UCL Special Collections. Image courtesy of UCL Special Collections</p></li>
+							<li><a href="manuscript.html"><img src="images/103_055_001.jpg" alt="Box 103, fol. 55, UCL Bentham Papers, UCL Special Collections. Image courtesy of UCL Special Collections"/></a><p>Box 103, fol. 55, UCL Bentham Papers, UCL Special Collections. Image courtesy of UCL Special Collections</p></li>
+						</ul>
+					</div>
+					<br/>
+					<button class="transparent_button" id="Documents">See all documents</button>
+				</div> 
+			</div>
+			<div class="container-fluid text-center" id="recommender">
+				<h2>Explore our collection</h2>
+				<p>Based on your interests, we can generate a document for you to transcribe! Jeremy Bentham wrote content for everyone!</p>
+			    <div class="assessment-container container" style="padding-bottom:60px">
+			        <div class="row">
+			            <div class="form-box">
+			                <form role="form" class="registration-form" action="javascript:void(0);">
+			                    <fieldset>
+			                        <div class="form-top">
+			                            <div class="form-top-left">
+			                            	<h3>Topics</h3>
+			                                <p>Select as many topics that are relevant to your interests as you want!</p>
+			                            </div>
+			                        </div>
+			                        <div class="form-bottom">
+			                        	<div class="btn-group" data-toggle="buttons">
+										  <label class="btn btn-primary active">
+										    <input type="checkbox" autocomplete="off" checked> Animal Welfare
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Arts
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Capital punishment
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Civil Code
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Constitutional Code
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Convict Transportation
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Correspondence
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Crime and Punishment
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Education
+										  </label>
+										   <label class="btn btn-primary active">
+										    <input type="checkbox" autocomplete="off">Law
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Legislation
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Moral Philosophy
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">New South Wales
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Panopticon
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Penal Code
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Political Reform
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Political Economy
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Preventive Police
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Religion
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Science
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Sexual Morality
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Torture
+										  </label>
+										</div>
+			                            <br style="clear:both" />
+			                            <div class="text-right">
+			                            	<button type="button" class="btn btn-next">Next</button>
+			                            </div>
+			                        </div>
+			                    </fieldset>
+			                    <fieldset>
+			                        <div class="form-top">
+			                            <div class="form-top-left">
+			                            	<h3>Status</h3>
+			                                <p>Some of our manuscripts are partially transcribed. Do you want to give it a try?</p>
+			                            </div>
+			                        </div>
+			                        <div class="form-bottom text-center">
+			                        	<div class="btn-group" data-toggle="buttons">
+										  <label class="btn btn-primary active">
+										    <input type="checkbox" autocomplete="off" checked>Untranscribed
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Partially transcribed
+										  </label>
+										</div>
+			                            <br style="clear:both" />
+			                            <div class="text-right">
+			                            	<button type="button" class="btn btn-next">Next</button>
+			                            </div>
+			                        </div>
+			                    </fieldset>
+			                    <fieldset>
+			                        <div class="form-top">
+			                            <div class="form-top-left">
+			                            	<h3>Difficulty level</h3>
+			                                <p>As Jeremy Betham was getting older, his handwriting got worse... Be careful!</p>
+			                            </div>
+			                        </div>
+			                        <div class="form-bottom text-center">
+			                        	<div class="btn-group" data-toggle="buttons">
+										  <label class="btn btn-primary active">
+										    <input type="checkbox" autocomplete="off" checked>Easy
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Moderate
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="checkbox" autocomplete="off">Difficult
+										  </label>
+										</div>
+			                            <div class="text-right">
+				                            <button type="button" class="btn btn-previous">Previous</button>
+				                            <button type="submit" class="btn" id="Submit">Submit</button>
+			                            </div>
+			                        </div>
+			                    </fieldset>
+			                </form>
+			            </div>
+			        </div>
+			    </div>
+				<!--<div class="container">
+					<div class="row">
+						<div class="col-sm-5">
+							<object width="425" height="350"> <param name="movie" value="http://www.youtube.com/v/V541tJEAJ8w?fs=1"> <param name="allowFullScreen" value="true"> <param name="wmode" value="transparent"> <embed src="http://www.youtube.com/v/V541tJEAJ8w?fs=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350" allowfullscreen="true" flashvars=""></object>
+						</div>
+						<div class="col-sm-7">
+							<p>In case you are unfamiliar with the transcription process we offer a quick tutorial</p>
+							<button class="black_button">Learn more</button>
+						</div>
+					</div>
+				</div>-->
+				<div class="container-fluid padding" id="FAQ">
+					<div class="container hidden-xs">
+						<div class="row">
+							<div class="col-sm-6">
+								<h2>'Bencharms' team</h2>
+								<div>
+									<div class="row text-center">
+										<div class="col-sm-3">
+											<img src="images/p1.jpg" style="height:90px"/>
+											<p><b>Phantira Waranukrohchok</b></b><br/>170,450 points</p>
+										</div>
+										<div class="col-sm-3">
+											<img src="images/p2.jpg" style="height:90px"/>
+											<p><b>Janine Georg</b><br/>170,450 points</p>
+										</div>
+										<div class="col-sm-3">
+											<img src="images/p3.png" style="height:90px"/>
+											<p><b>Supriya Rai</b><br/>170,450 points</p>
+										</div>
+									</div>
+									<div style="margin-top:20px"></div>
+									<div class="row text-center">
+										<div class="col-sm-3">
+											<img src="images/p4.jpg" style="height:90px"/>
+											<p><b>Oleksandr Kushchak</b><br/>170,450 points</p>
+										</div>
+										<div class="col-sm-3">
+											<img src="images/p5.jpg" style="height:90px"/>
+											<p><b>Olga Loboda</b><br/>170,450 points</p>
+										</div>
+										<div class="col-sm-3">
+											<img src="images/p1.png" style="height:90px"/>
+											<p><b>Jeremy Bentham</b><br/>170,450 points</p>
+										</div>
+									</div>
+								</div>
+								<div class="text-center" style="margin-top:30px; width:80%">
+								<a href="http://www.transcribe-bentham.da.ulcc.ac.uk/td/Special:TopUsers">See all participants</a>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<h2>Chat with experts!</h2>
+								<p>Got a question? We can help - ask our master transcribers</p>
+									<form action="contact.php" method="POST">
+										<div class="row">
+									        <div class="col-sm-6 form-group">
+									        	<label for="name">Name *</label>
+									        	<input class="form-control" id="name" name="name" type="text" required>
+									        </div>
+									        <div class="col-sm-6 form-group">
+									        	<label for="surname">Surname *</label>
+									        	<input class="form-control" id="surname" name="surname" type="text" required>
+									        </div>
+										</div>
+										<div class="row">
+									        <div class="col-sm-6 form-group">
+									        	<label for="email">Email Address</label>
+									        	<input class="form-control" id="email" name="email" type="email">
+									        </div>
+									        <div class="col-sm-6 form-group">
+									        	<label for="subject">Subject</label>
+									        	<input class="form-control" id="subject" name="subject" type="text">
+									        </div>
+										</div>
+										<label for="comments">Comment *</label>
+									    <textarea class="form-control" id="comments" name="comment" rows="5" required></textarea><br>
+								        <input type="submit" value="Send" class="transparent_button" style="width: 150px"/>
+								    </form>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container text-center" style="padding-bottom:20px">
+				<h2>Our sponsors</h2>
+				<div class="row" style="margin-bottom:40px">
+					<div class="col-sm-4">
+						<img src="images/UCLLogo.png" style="height:100px"/>
+					</div>
+					<div class="col-sm-4">
+						<img src="images/IBMLogo.png" style="height:100px"/>
+					</div>
+					<div class="col-sm-4">
+						<img src="images/UCLDH.png" style="height:100px"/>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container text-center">
+				<p>University College London<br/>
+					Gower Street<br/>
+					London<br/>
+					WC1E 6BT<br/>
+					Tel: <a href="tel:+44 (0)20 7679 2000">+44 (0)20 7679 2000</a>
+				</p>
+				<p>Copyright ©Transcribe Bentham, UCL, 2017. All Rights Reserved.</p>
+				<p>Coded by Olga Loboda. Brainstormed by the 'Bencharms' team.</p>
+			</div>
+		</footer>
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<script src="/assets/includes/config.php"></script>
+		<script src="js/scripts.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif]-->
+		<script>
+			$(document).ready(function () {
+			    $('.registration-form fieldset:first-child').fadeIn('slow');
+
+			    $('.registration-form input[type="text"]').on('focus', function () {
+			        $(this).removeClass('input-error');
+			    });
+
+			    // next step
+			    $('.registration-form .btn-next').on('click', function () {
+			        var parent_fieldset = $(this).parents('fieldset');
+			        var next_step = true;
+
+			        parent_fieldset.find('input[type="text"],input[type="email"]').each(function () {
+			            if ($(this).val() == "") {
+			                $(this).addClass('input-error');
+			                next_step = false;
+			            } else {
+			                $(this).removeClass('input-error');
+			            }
+			        });
+
+			        if (next_step) {
+			            parent_fieldset.fadeOut(400, function () {
+			                $(this).next().fadeIn();
+			            });
+			        }
+
+			    });
+
+			    // previous step
+			    $('.registration-form .btn-previous').on('click', function () {
+			        $(this).parents('fieldset').fadeOut(400, function () {
+			            $(this).prev().fadeIn();
+			        });
+			    });
+
+			    document.getElementById("Submit").onclick = function () {
+			        location.href = "manuscript_list.html";
+			    };
+
+			    document.getElementById("Generate").onclick = function () {
+			        location.href = "manuscript.html";
+			    };
+
+			    document.getElementById("Documents").onclick = function () {
+			        location.href = "manuscript_list.html";
+			    };
+			});
+		</script>
+	</body>
+</html>
