@@ -42,7 +42,8 @@ p a {
 	margin-top:0px !important;
 	background-image: url("../images/jeremy-bentham.jpg");
 	background-repeat:no-repeat;
-	background-position:left top;
+	background-position:center center;
+	background-color: black;
 }
 
 .content {
